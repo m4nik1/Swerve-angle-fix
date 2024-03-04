@@ -82,7 +82,7 @@ public class ElmSwerveModule {
     public void resetToAbsolute() { 
         double absolutePosition = getCanCoder().getDegrees() - angleOffset.getDegrees();
         integratedTurnEncoder.setPosition(absolutePosition); // sets the position to zero for now
-        turnRelativeController.setReference(absolutePosition, ControlType.kPosition);
+        turnRelativeController.setReference(absolutePosition, ControlType.kPosition); // sets the wheels to that absolute position
     }
 
     public void setAnglePos() {
